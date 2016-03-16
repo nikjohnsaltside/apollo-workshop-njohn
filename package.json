@@ -1,0 +1,10 @@
+{
+  "name": "apollo-workshop",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Node.js Hello world app on CentOS using docker",
+  "author": "Nikhil John <njohn@saltside.se>",
+  "dependencies": {
+    "express": "3.2.4"
+  }
+}
