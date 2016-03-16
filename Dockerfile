@@ -9,8 +9,10 @@ RUN     yum install -y nodejs npm
 COPY package.json /src/package.json
 RUN cd /src; npm install --production
 
+WORKDIR /src
+
 # Bundle app source
-COPY . /src
+COPY src/index.js /src/index.js
 
 EXPOSE  80
 CMD ["node", "/src/index.js"]
