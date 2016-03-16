@@ -1,6 +1,6 @@
 {
   "name": "apollo-workshop-njohn",
-  "image": "tutum/hello-world",
+  "image": "njohn/apollo-workshop",
   "containers": {
     "web": {
       "handoff": {
