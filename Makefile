@@ -1,13 +1,14 @@
 GIT_COMMIT:=$(shell git rev-parse --short HEAD)
+IMAGE:=saltside/apollo-workshop-njohn
 
 .PHONY: build
 build: Dockerfile
-	docker build -t njohn/apollo-workshop .
+	docker build -t $(IMAGE) .
 
 .PHONY: push
 push: build
-	docker tag njohn/apollo-workshop njohn/apollo-workshop:$(GIT_COMMIT)
-	docker push njohn/apollo-workshop:$(GIT_COMMIT)
+	docker tag $(IMAGE) $(IMAGE):$(GIT_COMMIT)
+	docker push $(IMAGE):$(GIT_COMMIT)
 
 .PHONY: test
 test: build
