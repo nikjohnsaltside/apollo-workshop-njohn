@@ -11,7 +11,7 @@ push: build
 
 .PHONY: test
 test: build
-	bin/apollo validate
+	apollo validate
 
 .PHONY: deploy
 deploy: push
